@@ -1,0 +1,35 @@
+group 'com.zz'
+version '1.0'
+
+buildscript {
+    ext {
+        springBootVersion = '1.5.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+dependencyManagement {
+    imports {
+        mavenBom ':spring-cloud-dependencies:Dalston.RELEASE'
+    }
+}
+
+dependencies {
+    compile ':spring-cloud-starter-config'
+    compile ':spring-cloud-starter-eureka'
+
+    compile("org.springframework.boot:spring-boot-starter-web")
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
