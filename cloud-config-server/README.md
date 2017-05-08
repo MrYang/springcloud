@@ -10,6 +10,9 @@ compile 'org.springframework.cloud:spring-cloud-starter-config'
 配置
 
 ```yaml
+server:
+  port: 8888
+  
 spring:
   application:
     name: config-server

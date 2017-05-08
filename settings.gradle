@@ -3,4 +3,6 @@ include 'cloud-config-server'
 include 'cloud-config-client'
 include 'cloud-eureka-server'
 include 'cloud-eureka-client'
+include 'cloud-eureka-ribbon'
+include 'cloud-eureka-feign'
 

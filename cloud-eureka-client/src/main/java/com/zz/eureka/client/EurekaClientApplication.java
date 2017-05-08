@@ -1,5 +1,6 @@
 package com.zz.eureka.client;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -20,8 +21,11 @@ public class EurekaClientApplication {
         SpringApplication.run(EurekaClientApplication.class, args);
     }
 
+    @Value("${server.port}")
+    private String port;
+
     @RequestMapping("hello")
     public String hello(String name) {
-        return "hello:" + name;
+        return "hello:" + name + ", i'm from port:" + port;
     }
 }
