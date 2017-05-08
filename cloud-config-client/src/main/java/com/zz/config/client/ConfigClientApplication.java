@@ -26,6 +26,6 @@ public class ConfigClientApplication {
 
     @RequestMapping(value = "/hello")
     public String hello() {
-        return name;
+        return "hello: " + name;
     }
 }
