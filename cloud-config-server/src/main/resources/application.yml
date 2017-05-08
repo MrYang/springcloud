@@ -11,3 +11,5 @@ spring:
         git:
           uri: https://github.com/MrYang/springcloud.git
           searchPaths: cloud-config-repo
+        #native:  本地查找
+        #  searchLocations: /data/config-repo

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      lable: master
+      profile: ${config.profile:dev}
+      url: http://localhost:8888/

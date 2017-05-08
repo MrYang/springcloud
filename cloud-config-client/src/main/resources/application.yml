@@ -1,11 +1,5 @@
 server:
   port: 8881
 
-spring:
-  application:
-    name: config-client
-  cloud:
-    config:
-      lable: master
-      profile: dev
-      url: http://localhost:8888/
+# config-server先启动，远程的name会覆盖该参数
+name: defalutName
