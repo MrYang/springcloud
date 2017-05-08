@@ -7,29 +7,29 @@ buildscript {
     }
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: "io.spring.dependency-management"
 
-apply plugin: 'java'
-apply plugin: 'spring-boot'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 
-dependencyManagement {
-    imports {
-        mavenBom ':spring-cloud-dependencies:Dalston.RELEASE'
+    repositories {
+        mavenCentral()
     }
-}
 
-dependencies {
-    compile ':spring-cloud-starter-config'
-    compile ':spring-cloud-starter-eureka'
-
-    compile("org.springframework.boot:spring-boot-starter-web")
-
-    testCompile("org.springframework.boot:spring-boot-starter-test")
+    dependencyManagement {
+        imports {
+            //mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+            mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Dalston.RELEASE'
+        }
+    }
 }
