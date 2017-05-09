@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @since 2017-05-08
  */
 
-@FeignClient("eureka-client")
+@FeignClient(value = "eureka-client", fallback = FeignErrorHelloService.class)
 public interface FeignHelloService {
 
     @RequestMapping("/hello")

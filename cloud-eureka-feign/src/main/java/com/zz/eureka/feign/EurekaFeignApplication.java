@@ -31,5 +31,4 @@ public class EurekaFeignApplication {
         return feignHelloService.hello(name);
     }
 
-
 }
