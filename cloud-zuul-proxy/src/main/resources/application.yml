@@ -1,0 +1,24 @@
+server:
+  port: 8766
+
+error:
+  whitelabel:
+    enabled: flase
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: zuul-proxy
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: eureka-feign
+    api-b:
+      path: /api-b/**
+      serviceId: eureka-ribbon

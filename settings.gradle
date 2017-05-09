@@ -5,4 +5,5 @@ include 'cloud-eureka-server'
 include 'cloud-eureka-client'
 include 'cloud-eureka-ribbon'
 include 'cloud-eureka-feign'
+include 'cloud-zuul-proxy'
 
