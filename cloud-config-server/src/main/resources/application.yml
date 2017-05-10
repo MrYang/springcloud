@@ -1,6 +1,16 @@
 server:
   port: 8888
 
+management:
+  security:
+    enabled: false
+
+# 需要添加Spring Security
+security:
+  user:
+    name: admin
+    password: admin
+
 spring:
   application:
     name: config-server
@@ -13,3 +23,9 @@ spring:
           searchPaths: cloud-config-repo
         #native:  本地查找
         #  searchLocations: /data/config-repo
+
+    stream:
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9092
+          zk-nodes: 127.0.0.1:2181

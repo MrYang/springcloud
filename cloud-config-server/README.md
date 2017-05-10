@@ -44,3 +44,32 @@ spring:
 
 例如访问`http://localhost:8888/config-client/dev/master` 对应的内容是
 `spring.cloud.config.server.git.searchPaths`配置的config-client-dev.yml 文件
+
+
+配置改动push到各个config-client
+
+添加依赖
+
+```groovy
+compile 'org.springframework.cloud:spring-cloud-starter-bus-kafka'
+compile 'org.springframework.boot:spring-boot-starter-actuator'
+```
+
+添加配置, 配置kafka,zookeeper地址
+
+```yaml
+spring:
+  application:
+    name: config-server
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9092
+          zk-nodes: 127.0.0.1:2181
+```
+
+git searchPaths 中配置改动以后，执行 `curl -X POST http://localhost:8888/bus/refresh` 即推送最新的配置到client，
+也可以改该地址配置为git web hook，push时能自动推送配置
+
+注意client 需要配置`@RefreshScope`注解

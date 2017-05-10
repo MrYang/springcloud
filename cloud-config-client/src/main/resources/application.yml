@@ -1,5 +1,17 @@
 server:
   port: 8881
 
+management:
+  security:
+    enabled: false
+
 # config-server先启动，远程的name会覆盖该参数
 name: defalutName
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9092
+          zk-nodes: 127.0.0.1:2181
