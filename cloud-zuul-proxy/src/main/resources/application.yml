@@ -1,9 +1,8 @@
 server:
   port: 8766
-
-error:
-  whitelabel:
-    enabled: flase
+  error:
+    whitelabel:
+      enabled: true
 
 eureka:
   client:

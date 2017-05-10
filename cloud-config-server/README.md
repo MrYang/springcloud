@@ -48,7 +48,7 @@ spring:
 
 配置改动push到各个config-client
 
-添加依赖
+添加bus-kafka依赖
 
 ```groovy
 compile 'org.springframework.cloud:spring-cloud-starter-bus-kafka'
