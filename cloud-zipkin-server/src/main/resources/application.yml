@@ -1,5 +1,8 @@
 server:
-  port: 8764
+  port: 8767
+  error:
+    whitelabel:
+      enabled: true
 
 eureka:
   client:
@@ -8,6 +11,4 @@ eureka:
 
 spring:
   application:
-    name: eureka-ribbon
-  zipkin:
-    base-url: http://localhost:8767
+    name: zipkin-server

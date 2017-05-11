@@ -6,8 +6,9 @@
 - cloud-bus 与config配合，修改配置后自动刷新bean
 - eureka  [注册中心](https://github.com/MrYang/springcloud/tree/master/cloud-eureka-server)
 - hystrix [熔断器](https://github.com/MrYang/springcloud/tree/master/cloud-eureka-ribbon)
-- hystrix-dashboard 单个app服务调用情况
+- hystrix-dashboard [服务调用情况](https://github.com/MrYang/springcloud/tree/master/cloud-eureka-ribbon)
 - hystrix-turbine
 - ribbon  [负载均衡请求](https://github.com/MrYang/springcloud/tree/master/cloud-eureka-ribbon)
 - feign [负载均衡请求，封装了ribbon, 自带熔断器](https://github.com/MrYang/springcloud/tree/master/cloud-eureka-feign)
 - zuul [网关，动态路由，监控服务](https://github.com/MrYang/springcloud/tree/master/cloud-zuul-proxy)
+- sleuth&zipkin [服务调用链追踪](https://github.com/MrYang/springcloud/tree/master/cloud-zipkin-server)

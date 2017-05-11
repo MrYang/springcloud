@@ -57,6 +57,24 @@ public RestTemplate restTemplate() {
     }
 ```
 
-添加@EnableHystrixDashboard 注解，`http://localhost:8764/hystrix` 查看断路器状态
+添加@EnableHystrixDashboard 注解，浏览器打开 `http://localhost:8764/hystrix`
 
-输入``http://localhost:8764/hystrix.stream` 点击`monitor stream` 查看该app的服务调用情况
+输入``http://localhost:8764/hystrix.stream` 点击`monitor stream` 查看app的服务调用情况
+
+
+添加spring-cloud-sleuth,zipkin 链路调用追踪分析
+
+```groovy
+compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
+compile 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+```
+
+配置：
+
+```yaml
+spring:
+  zipkin:
+    base-url: http://localhost:8767
+```
+
+Spring检查有sleuth和zipkin，自动在RestTemplate的调用过程中向HTTP请求注入追踪信息，并向zipkin Server发送

@@ -4,6 +4,9 @@ dependencies {
     compile 'org.springframework.cloud:spring-cloud-starter-hystrix'
     compile 'org.springframework.cloud:spring-cloud-starter-hystrix-dashboard'
     compile 'org.springframework.cloud:spring-cloud-starter-turbine'
+    compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
+    compile 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
 }
