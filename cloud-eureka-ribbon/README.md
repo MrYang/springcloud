@@ -59,7 +59,7 @@ public RestTemplate restTemplate() {
 
 添加@EnableHystrixDashboard 注解，浏览器打开 `http://localhost:8764/hystrix`
 
-输入``http://localhost:8764/hystrix.stream` 点击`monitor stream` 查看app的服务调用情况
+输入`http://localhost:8764/hystrix.stream` 点击`monitor stream` 查看app的服务调用情况
 
 
 添加spring-cloud-sleuth,zipkin 链路调用追踪分析
