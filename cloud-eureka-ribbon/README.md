@@ -56,3 +56,7 @@ public RestTemplate restTemplate() {
         return "sorry:" + name + ", error!!";
     }
 ```
+
+添加@EnableHystrixDashboard 注解，`http://localhost:8764/hystrix` 查看断路器状态
+
+输入``http://localhost:8764/hystrix.stream` 点击`monitor stream` 查看该app的服务调用情况

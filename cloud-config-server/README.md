@@ -52,7 +52,6 @@ spring:
 
 ```groovy
 compile 'org.springframework.cloud:spring-cloud-starter-bus-kafka'
-compile 'org.springframework.boot:spring-boot-starter-actuator'
 ```
 
 添加配置, 配置kafka,zookeeper地址
