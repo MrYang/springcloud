@@ -20,3 +20,5 @@ management:
 spring:
   application:
     name: eureka-feign
+  zipkin:
+    base-url: http://localhost:8767
